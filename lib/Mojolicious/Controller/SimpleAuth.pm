@@ -1,6 +1,5 @@
 package Mojolicious::Controller::SimpleAuth;
 use Mojo::Base 'Mojolicious::Controller';
-use Digest::SHA 'sha256_base64';
 
 # Overload these in a subclass
 sub register_user { ... }
