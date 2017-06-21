@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head><title><%= title %></title></head>
+    <body>
+        % if (my $message = flash 'message') {
+            <div class="<%= $message->[0] %>">
+                <%= $message->[1] %>
+            </div>
+        % }
+
+        <%= content %>
+    </body>
+</html>

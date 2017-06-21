@@ -1,0 +1,15 @@
+% layout 'default';
+% title 'Login';
+
+%= form_for '/login' => (method => 'POST') => begin
+    <table><tr>
+        <td>E-mail:</td>
+        <td><%= text_field 'email' %></td>
+    </tr><tr> 
+        <td>Password:</td>
+        <td><%= password_field 'password' %></td>
+    </tr><tr>
+        %= hidden_field 'next' => param 'next'
+        <td><%= submit_button 'Login' %></td>
+    </tr></table>
+%= end
